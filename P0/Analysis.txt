@@ -1,0 +1,18 @@
+Once you have completed your solution for each problem, perform a run time analysis (Worst Case Big-O Notation) of your solution. Document this for each problem and include this in your submission.
+
+# Run time Analysis for each task
+
+## Task0
+The run time anlaysis of this solution is O(1). Since we are extracting the element by it's index, the run time is constant.
+
+## Task1
+O(n) is the run time analysis for this task. We traverse the entire records in a texts file for n times in a loop and n more times for records in calls data. Total run tiem is O(n) + O(n) = O(n).
+
+## Task2
+The worst time complexity in this case is O(n), which is similar to the above task.
+
+## Task3
+There are two individual problems in this task. The time complexity to retrieve the list of codes is O(n) and to sort the codes is O(nlogn). So, worst tiem complexity is O(n) + O(nlogn) = O(nlogn).
+
+## Task4
+Similar to task3, the time complexity here is O(nlogn).
