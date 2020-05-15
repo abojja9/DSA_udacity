@@ -60,19 +60,19 @@ def codes_list(calls):
 final_list = codes_list(calls)
 
 print ("The numbers called by people in Bangalore have codes:")
-for ele in final_list:
-  print (ele)
+for number in final_list:
+  print (number)
 
 # PART B Solution
-fixed_lines_from = set()
-fixed_lines_to = set()
+fixed_lines_from = 0
+fixed_lines_to = 0
 
 for record in calls:
   if "(080)" in record[0]:
-    fixed_lines_from.add(record[0])
+    fixed_lines_from += 1
     if "(080)" in record[1]:
-      fixed_lines_to.add(record[1])
-percent_of_calls = (len(fixed_lines_to) * 1.0)/len(fixed_lines_from)
+      fixed_lines_to += 1
+percent_of_calls = (fixed_lines_to * 100.0)/fixed_lines_from
 
 print(f"{percent_of_calls:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
   

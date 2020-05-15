@@ -23,20 +23,10 @@ September 2016.".
 telephone_time = {}
 
 for record in calls:
-    if record[0] in telephone_time:
-        telephone_time[record[0]] = max(int(record[-1]), telephone_time[record[0]])
-    else:
-        telephone_time[record[0]] = int(record[-1])
-    
-    if record[1] in telephone_time:
-        telephone_time[record[1]] = max(int(record[-1]), telephone_time[record[1]])
-    else:
-        telephone_time[record[1]] = int(record[-1])
-
-# print ("telephone_time:", telephone_time)
+    for x in [0,1]:
+        telephone_time[record[x]] = telephone_time.get(record[x], 0) + int(record[-1])
 
 max_val = max(telephone_time.values())
-# print (max_val)
 
 for key in telephone_time:
     if telephone_time[key] == max_val:
